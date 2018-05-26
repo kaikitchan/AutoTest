@@ -1,4 +1,8 @@
 #!/bin/sh
+
+#an auto commit script to github
+#author: Zhenru
+#github:Zhenru1993
 echo running......
 while true;
 do
@@ -21,7 +25,7 @@ do
 
 		#file wrtie section
 		if [ -e text.txt ]; then
-		    echo hello >> text.txt
+		    echo hello >> $text.txt  #change var to user name
 		else
 		    echo > text.txt
     	        fi
@@ -49,5 +53,5 @@ do
 		
 		sleep $(($rand))s       #need to change time unit to min
         done
-        sleep 24s  #need to change time unit to hour
+        sleep 24h  #need to change time unit to hour
 done
